@@ -1,0 +1,73 @@
+﻿
+#myForm {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: 'Source Sans 3';*/
+    font-family: 'Source Sans 3';
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+#myForm form {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+#myForm .banner {
+    background-color: #AFB2B3;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 10px;
+}
+
+#myForm input,
+#myForm select,
+#myForm textarea,
+#myForm button {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+    #myForm input :focus,
+    #myForm select :focus,
+    #myForm textarea :focus,
+    #myForm button:hover {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    #myForm input[type="submit"] {
+        background-color: #e76744;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        #myForm input[type="submit"]:hover {
+            background-color: #9b3216;
+        }
+
+        #myForm input[type="submit"]:active {
+            background-color: #671a06;
+        }

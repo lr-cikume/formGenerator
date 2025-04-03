@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+WORKDIR /app
+
+COPY ["Presentation/Presentation.csproj", "Presentation/"]
+COPY ["Domain/Domain.csproj", "Domain/"]
+COPY ["Application/Application.csproj", "Application/"]
+COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+
+RUN dotnet restore "Presentation/Presentation.csproj"
+
+COPY . ./
+
+RUN dotnet publish "Presentation/Presentation.csproj" -c Debug -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+EXPOSE 80
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://+:80
+
+COPY --from=0 /app/out .
+
+ENTRYPOINT ["dotnet", "Presentation.dll"]
