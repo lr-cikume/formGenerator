@@ -21,15 +21,15 @@ FormGeneratorAPI is a C# application that allows dynamic form generation. The so
 
 Technologies Used
 ------------------
-C# 
-net8.0 
-Entity Framework (for data access)
-EntityFrameworkCore.PostgreSQL
-EntityFrameworkCore.SqlServer
-ASP.NET Core
-Dependency Injection (built-in DI container in .NET)
-XUnit 2.5 + FluentAssertions 8.2(for unit testing)
-Docker
+- C# 
+- net8.0 
+- Entity Framework (for data access)
+- EntityFrameworkCore.PostgreSQL
+- EntityFrameworkCore.SqlServer
+- ASP.NET Core
+- Dependency Injection (built-in DI container in .NET)
+- XUnit 2.5 + FluentAssertions 8.2(for unit testing)
+- Docker
 
 
 Project structure
@@ -76,15 +76,15 @@ Installation Instructions
 4. Set up environment variables for the docker container:
     .. code-block:: sh
 # External PostgreSQL Server
-POSTGRES_HOST="addYourHost"
-POSTGRES_DB="addYourDb"
-POSTGRES_USER="addYourUser"
-POSTGRES_PASSWORD="addYourPass"
+POSTGRES_HOST="{{addYourHost}}"
+POSTGRES_DB="{{addYourDb}}"
+POSTGRES_USER="{{addYourUser}}"
+POSTGRES_PASSWORD="{{addYourPass}}"
 
 # SQL Database
-DATABASESETTINGS__HOST="addYourHost"
-DATABASESETTINGS__USER="addYourUser"
-DATABASESETTINGS__PASSWORD="addYourPass"
+DATABASESETTINGS__HOST="{{addYourHost}}"
+DATABASESETTINGS__USER="{{addYourUser}}"
+DATABASESETTINGS__PASSWORD="{{addYourPass}}"
 
 
 Running the Application
