@@ -14,6 +14,13 @@ Table of Contents
 FormGeneratorAPI
 ================
 
+.. code-block:: console
+
+    # Enter the Sphinx project
+    cd docs/
+
+
+
 Description
 -----------
 FormGeneratorAPI is a C# application that allows dynamic form generation. The solution is organized into several projects to maintain a clean and modular architecture, making it easy to evolve over time while keeping business logic separate from infrastructure and external dependencies.
@@ -59,40 +66,65 @@ Requirements
 - .NET SDK
 - Visual Studio or JetBrains Rider
 
+
 Installation Instructions
 -------------------------
 1. Clone the repository:
-    .. code-block:: sh
+.. code-block:: console
         git clone <REPOSITORY_URL>
 
 2. Navigate to the project directory:
-    .. code-block:: sh
+.. code-block:: console
         cd FormGeneratorAPI
 
 3. Restore the NuGet packages:
-    .. code-block:: sh
+.. code-block:: console
         dotnet restore
-
-4. Set up environment variables for the docker container:
-    .. code-block:: sh
-# External PostgreSQL Server
-POSTGRES_HOST="{{addYourHost}}"
-POSTGRES_DB="{{addYourDb}}"
-POSTGRES_USER="{{addYourUser}}"
-POSTGRES_PASSWORD="{{addYourPass}}"
-
-# SQL Database
-DATABASESETTINGS__HOST="{{addYourHost}}"
-DATABASESETTINGS__USER="{{addYourUser}}"
-DATABASESETTINGS__PASSWORD="{{addYourPass}}"
 
 
 Running the Application
------------------------
+-------------------------
 To run the application in development mode:
+.. code-block:: console
+	dotnet run --project Presentation/Presentation.csproj
 
-.. code-block:: sh
-    dotnet run --project Presentation/Presentation.csproj
+
+Running Tests
+-------------------------
+To run the tests, use the following command:
+.. code-block:: console
+	dotnet test
+
+
+Docker Setup
+-------------------------
+To start the application using Docker, use the following command:
+.. code-block:: console
+	 docker-compose -f docker-compose.dev.yml up
+
+To stop the application, use the following command:
+.. code-block:: console
+	 docker-compose -f docker-compose.dev.yml down
+
+
+Environment Variables
+-------------------------
+Ensure the following environment variables are configured:
+
+.. code-block:: console
+	
+	# External PostgreSQL Server
+	POSTGRES_HOST="{{addYourHost}}"
+	POSTGRES_DB="{{addYourDb}}"
+	POSTGRES_USER="{{addYourUser}}"
+	POSTGRES_PASSWORD="{{addYourPass}}"
+
+	# SQL Database
+	DATABASESETTINGS__HOST="{{addYourHost}}"
+	DATABASESETTINGS__USER="{{addYourUser}}"
+	DATABASESETTINGS__PASSWORD="{{addYourPass}}"
+
+Replace the placeholder values with your actual configuration.
 
 
 Team members:
