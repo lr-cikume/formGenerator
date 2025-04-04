@@ -63,16 +63,19 @@ Requirements
 Installation Instructions
 -------------------------
 1. Clone the repository:
+
 .. code-block:: console
 
         git clone <REPOSITORY_URL>
 
 2. Navigate to the project directory:
+
 .. code-block:: console
 
         cd FormGeneratorAPI
 
 3. Restore the NuGet packages:
+
 .. code-block:: console
 
         dotnet restore
@@ -81,6 +84,7 @@ Installation Instructions
 Running the Application
 -------------------------
 To run the application in development mode:
+
 .. code-block:: console
 
 	dotnet run --project Presentation/Presentation.csproj
@@ -89,6 +93,7 @@ To run the application in development mode:
 Running Tests
 -------------------------
 To run the tests, use the following command:
+
 .. code-block:: console
 
 	dotnet test
@@ -97,11 +102,13 @@ To run the tests, use the following command:
 Docker Setup
 -------------------------
 To start the application using Docker, use the following command:
+
 .. code-block:: console
 
 	 docker-compose -f docker-compose.dev.yml up
 
 To stop the application, use the following command:
+
 .. code-block:: console
 
 	 docker-compose -f docker-compose.dev.yml down
@@ -130,6 +137,7 @@ Replace the placeholder values with your actual configuration.
 Team members:
 -------------
 Daniel Del Cid.
+
 Luis Regalado
 
 
