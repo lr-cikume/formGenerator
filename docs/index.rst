@@ -19,6 +19,19 @@ Description
 FormGeneratorAPI is a C# application that allows dynamic form generation. The solution is organized into several projects to maintain a clean and modular architecture, making it easy to evolve over time while keeping business logic separate from infrastructure and external dependencies.
 
 
+Technologies Used
+------------------
+C# 
+net8.0 
+Entity Framework (for data access)
+EntityFrameworkCore.PostgreSQL
+EntityFrameworkCore.SqlServer
+ASP.NET Core
+Dependency Injection (built-in DI container in .NET)
+XUnit 2.5 + FluentAssertions 8.2(for unit testing)
+Docker
+
+
 Project structure
 -----------------
 The solution consists of the following projects:
