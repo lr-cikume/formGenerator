@@ -14,13 +14,6 @@ Table of Contents
 FormGeneratorAPI
 ================
 
-.. code-block:: console
-
-    # Enter the Sphinx project
-    cd docs/
-
-
-
 Description
 -----------
 FormGeneratorAPI is a C# application that allows dynamic form generation. The solution is organized into several projects to maintain a clean and modular architecture, making it easy to evolve over time while keeping business logic separate from infrastructure and external dependencies.
@@ -71,14 +64,17 @@ Installation Instructions
 -------------------------
 1. Clone the repository:
 .. code-block:: console
+
         git clone <REPOSITORY_URL>
 
 2. Navigate to the project directory:
 .. code-block:: console
+
         cd FormGeneratorAPI
 
 3. Restore the NuGet packages:
 .. code-block:: console
+
         dotnet restore
 
 
@@ -86,6 +82,7 @@ Running the Application
 -------------------------
 To run the application in development mode:
 .. code-block:: console
+
 	dotnet run --project Presentation/Presentation.csproj
 
 
@@ -93,6 +90,7 @@ Running Tests
 -------------------------
 To run the tests, use the following command:
 .. code-block:: console
+
 	dotnet test
 
 
@@ -100,10 +98,12 @@ Docker Setup
 -------------------------
 To start the application using Docker, use the following command:
 .. code-block:: console
+
 	 docker-compose -f docker-compose.dev.yml up
 
 To stop the application, use the following command:
 .. code-block:: console
+
 	 docker-compose -f docker-compose.dev.yml down
 
 
